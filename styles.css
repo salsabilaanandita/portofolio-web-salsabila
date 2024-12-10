@@ -1,0 +1,234 @@
+/* Global Styles */
+@font-face {
+  font-family: 'Salsabila';
+  src: url('./assets/salsabila.woff2') format('woff2 supports variations'),
+       url('./assets/salsabila.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+* {
+  box-sizing: border-box;
+  background-color: #ffff;
+  color: #0d0c22;
+}
+html {
+  font-family: 'Salsabila';
+  line-height: 1.15;
+}
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+p {
+  color: #6E6D7A;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 16px;
+}
+.line-break {
+  height: 10px;
+}
+
+/* Header Styles */
+#header {
+  text-align: center;
+}
+#main {
+  padding: 10px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#footer {
+  padding: 10px 0px;
+  max-width: 1100px;
+  margin: 10px auto;
+  border-top: solid #f5f5f5;
+}
+
+.banner {
+  background-image: url(assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 185px;
+  position: relative;
+}
+
+.banner__img {
+  position: absolute;
+  bottom: -60px; /* Menyesuaikan posisi pada header */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Agar di atas elemen lain */
+  background-color: transparent; /* Pastikan tidak ada latar belakang */
+  padding: 0; /* Tidak ada padding */
+  margin: 0; /* Tidak ada margin */
+  display: flex; /* Menyusun konten tengah */
+  justify-content: center;
+  align-items: center;
+}
+
+.img-photo {
+  width: 150px; /* Sesuaikan ukuran lingkaran */
+  height: 150px; /* Sama dengan width */
+  border-radius: 50%; /* Membuat lingkaran */
+  border: 5px solid #ffffff; /* Border putih */
+  object-fit: cover; /* Memastikan gambar proporsional */
+  background-color: transparent; /* Tidak ada latar belakang */
+}
+
+/* Bio Section */
+.bio {
+  margin: 0 auto;
+  margin-top: 65px;
+  margin-bottom: 30px;
+  max-width: 768px;
+}
+.bio__name {
+  font-size: 30px;
+  font-weight: 700;
+}
+.bio__description {
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  line-height: 24px;
+}
+.bio__extras {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #888888;
+}
+
+/* Menu Section */
+.menu {
+  border-top: 1px solid #e5e5e8;
+  border-bottom: 1px solid #e5e5e8;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  font-weight: 700;
+}
+.menu__tab {
+  text-decoration: none;
+  padding: 15px 10px;
+}
+.menu__tab.active {
+  border-bottom: 3px solid #33bfed;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+.home__left {
+  flex: 0 0 70%;
+}
+.home__right {
+  flex: auto;
+}
+.home__about, .home__expertise, .home__fluent, .home__education {
+  padding-bottom: 20px;
+}
+.home__group-tag {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.home__group-tag .tag {
+  border-radius: 20px;
+  padding: 4px 12px;
+  border: 1px solid #d8d8dd;
+  font-size: 14px;
+  background-color: #fafafa;
+  color: #6E6D7A;
+  font-weight: 600;
+}
+.home__group-card {
+  border: 1px solid #d8d8dd;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 12px 18px;
+  border-left: 3px solid #d8d8dd;
+  width: fit-content;
+}
+.home__group-card.active {
+  border-left-color: #33bfed;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  display: flex;
+  gap: 5px;
+}
+.card-subtitle {
+  font-size: 12px;
+  color: #6E6D7A;
+}
+.card-year {
+  font-size: 10px;
+  border: 1px solid #d8d8dd;
+  border-radius: 20px;
+  padding: 2px 7px;
+  color: #6E6D7A;
+  background-color: #fafafa;
+  font-weight: 500;
+}
+
+/* Footer Section */
+.footer__text {
+  text-align: right;
+  font-size: 14px;
+  color: #6E6D7A;
+}
+
+/* Portofolio Section */
+.portofolio__box {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.portofolio__box-img {
+  display: flex;
+  gap: 2rem;
+}
+.img-portofolio {
+  max-height: 200px;
+  background-color: #fafafa;
+  border-radius: 15px;
+  border: 1px solid #d8d8dd;
+}
+.title-portofolio {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+.title-date {
+  color: #6E6D7A;
+  font-weight: 500;
+  font-size: 14px;
+}
+.date-portofolio {
+  font-size: 12px;
+  padding: 2px 10px;
+  border: 1px solid #d8d8dd;
+  border-radius: 10px;
+  margin-left: 5px;
+  background-color: #fafafa;
+  color: #6E6D7A;
+}
+.btn-portofolio {
+  padding: 10px 25px;
+  background-color: #33bfed;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+}
